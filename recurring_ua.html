@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оплата замовлення | BTUA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lib/intlTelInput.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet"> </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a href="http://btua.com.ua" target="_blank" class="header__link">
+          <img src="./images/btua_logo.png" alt="http://btua.com.ua" width="168" height="75" class="header__logo">
+        </a>
+      </header>
+      <div class="page__content container">
+        <div class="row justify-content-center">
+          <div class="col col-lg-9 col-xl-8">
+            <section class="section container">
+              <div class="section__header row">
+                <h2 class="section__title col-7"> Оплата замовлення </h2>
+                <div class="section__lang col-5">
+                  <a href="recurring_ru.html" id="ru" title="RU" class="section__icon ">
+                    <img src="images/lang_ru.svg" alt="RU" width="18" height="18"> </a>
+                  <a href="recurring_ua.html" id="ua" title="UA" class="section__icon active">
+                    <img src="images/lang_ua.svg" alt="UA" width="18" height="18"> </a>
+                  <a href="recurring_en.html" id="en" title="EN" class="section__icon ">
+                    <img src="images/lang_en.svg" alt="EN" width="18" height="18"> </a>
+                </div>
+              </div>
+              <div class="info section__info row">
+                <div class="info__col col-12 col-md-6">
+                  <div class="info__item row">
+                    <span class="info__label col-12 col-md-4">Компанія:</span>
+                    <span class="info__text col-12 col-md-8">http://btua.com.ua</span>
+                  </div>
+                  <div class="info__item row">
+                    <span class="info__label col-12 col-md-4">Номер замовлення:</span>
+                    <span class="info__text col-12 col-md-8">201806061727</span>
+                  </div>
+                </div>
+                <div class="info__col col-12 order-md-last">
+                  <div class="info__item row">
+                    <span class="info__label col-12 col-md-2">Опис:</span>
+                    <div class="info__text col-12 col-md-10">
+                      <span>Тут опис замовлення</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="info__col col-12 col-md-6">
+                  <div class="info__item row">
+                    <span class="info__label col-12 col-md-4">Сума:</span>
+                    <span class="info__text col-12 col-md-8">
+                      <strong class="info__accent">10.50 грн.</strong>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section container error_paymnet">
+                <span>Тут опис пимилки</span>
+            </section>
+            <section class="section container">
+              <div class="section__header row">
+                <div class="col">
+                  <h2 class="section__title"> Введіть реквізити карти </h2>
+                </div>
+              </div>
+              <div class="pay section__pay">
+                <div id="content1" class="content pay__content visible">
+                  <form action="" name="form_card" id="form_card">
+                    <div class="content__card">
+                      <div class="card">
+                        <div class="card__customer">
+                          <div class="card__name">Вася Пупкин</div>
+                          <div class="card__name">4627 73** **** 2907</div>
+                        </div>
+                        <div class="card__date">
+                          <div class="card__group card__group_recurring card__code card__code_recurring">
+                            <label for="cvv2" class="card__label">
+                              <span class="card__hint" data-hint="hint_cvv">
+                                <img src="./images/cvv_exclamation.svg" width="13" height="13"> </span> CVC2/CVV2: </label>
+                            <input type="tel" maxlength="3" id="cvv-rec" name="cvv-rec" pattern="[0-9]*" onkeyup="if(this.value.length >= 3){document.getElementById('btn_submit').focus();}" class="card__input" /> </div>
+                          <div id="hint_cvv" class="hint">
+                            <h3 class="hint__title">Як знайти CVV / CVC по кредитній карті</h3>
+                            <p class="hint__text">CVV / CVC код використовується для підтвердження того, що під час транзакції була використана справжня кредитна карта. Дана процедура стала обов&#39;язковою для он-лайн транзакцій з 1 січня 2003 р.</p>
+                            <p class="hint__text">У випадку з VISA і Master Card, даний код являє собою Код Безпеки, що складається з трьох цифр, нанесених на тильній стороні карти.</p>
+                            <div class="hint__text hint__img">
+                              <img src="images/help_card.png" width="165" height="103" /> </div>
+                          </div>
+                        </div>
+                        <div class="card__logos">
+                          <img src="./images/card_visa.svg" alt="Visa" class="card__logo">
+                          <img src="./images/card_mastercard.svg" alt="Mastercard" class="card__logo">
+                          <img src=" ./images/card_verified-by-visa.svg " alt="Visa Verified " class="card__logo">
+                          <img src="./images/card_mastercard-securecode.svg" alt="Securecode" class="card__logo"> </div>
+                      </div>
+                      <div class="card-bottom">
+                        <div class="card-bottom__line"></div>
+                      </div>
+                      <div class=" row justify-content-center ">
+                        <div class="col-8 col-md-5">
+                          <button type="submit" class="btn" id="btn_submit">Сплатити</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <section class="help">
+              <div class="help__line">
+                <p class="help__text">В разі неуспішного платежу зверніться в Службу підтримки компанії Platon</p>
+              </div>
+              <div class="help__line">
+                <p class="help__text help__text_middle">
+                  <a href="tel:0(800)750-504" class="help__link">0(800)750-504</a> - безкоштовно зі стаціонарних і мобільних телефонів усіх операторів України;
+                  <br>
+                  <a href="tel:38-044-339-9904" class="help__link">+38(044)339-99-04</a> - для міжнародних дзвінків;
+                  <br>або напишіть нам:
+                  <a href="mailto:support@platonline.com" class="help__link">support@platonline.com</a>
+                </p>
+              </div>
+              <div class="help__line d-none d-md-block">
+                <p class="help__text help__text_bottom">Ваша IP-адреса моніториться для запобігання шахрайства.</p>
+                <p class="help__text help__text_bottom">Шахрайство переслідується за законом.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <img src="./images/comodo-secure.svg" alt="Comodo" width="65" height="40" class="footer__logo">
+        <div class="footer__copyright"> © Platon 2018, ТОВ «Платежі онлайн»
+          <br> Київ, вул.Воздвиженська, 10Б, оф.22 </div>
+      </footer>
+    </div>
+    <script>
+      var messageValid = {
+        number:
+        {
+          required: 'Будь ласка, введіть номер карти',
+          digits: 'Будь ласка, введіть число',
+          minlength: 'Будь ласка, введіть 16 символів карти'
+        },
+        exp:
+        {
+          required: 'Оберіть термін дії',
+          pastmonth: 'Карта недійсна'
+        },
+        cvv2:
+        {
+          required: 'Введіть код',
+          minlength: 'Мінімум 3 символа',
+          maxlength: 'Не більше ніж 3 символа',
+          digits: 'Введіть число'
+        },
+        phone:
+        {
+          required: 'Будь ласка, введіть вірний номер телефону',
+        },
+        password:
+        {
+          required: 'Будь ласка, введіть пароль'
+        }
+      }
+
+    </script>
+    <script src="js/lib/jquery-2.2.4.min.js"></script>
+    <script src="js/lib/jqery-migrate-1.2.1.min.js"></script>
+    <script src="js/lib/jquery.groupinputs.js"></script>
+    <script src="js/lib/jquery.validate.min.js"></script>
+    <script src="js/lib/intlTelInput.min.js"></script>
+    <script src="js/lib/intl-utils.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
